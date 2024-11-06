@@ -1,0 +1,19 @@
+db.employees.find({$or: [{age: {$gt: 30}},{experience: {$gt: 5}}]})
+
+db.products.find({stock: {$gt: 0}, price: {$lt: 50}})
+
+db.students.find({$or: [{enrolled: false}, {grade: {$lt: "C"}}]})
+
+db.courses.find({$or: [{duration: {$lt: 6}},{instructor: {$exists: false}}]})
+
+db.orders.find({$or: [{status: {$ne: "shipped"}},{shipped_date: {$exists: false}}]})
+
+db.employees.find({department: {$nin: ["Engineering", "IT"]}}, {name: 1,department: 1})
+
+db.students.find({exam_score: {$lt: 50},participation: false})
+
+db.employees.find({department: "Sales", $or: [{experience: {$gt: 3}},{age: {$lt: 25}}]})
+
+db.inventory.find({$or: [{price: {$lt: 100, $exists: true}}, {stock: {$exists: false}}]})
+
+db.courses.find({$and: [{instructor: {$ne: "John Smith"}},{duration: {$lte: 10}}]})

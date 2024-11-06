@@ -1,0 +1,27 @@
+db.students.find({grade: {$ne: "A"}}, {name: 1, grade: 1})
+
+db.students.find({age: {$lt: 18}}, {name: 1, age: 1, class: 1})
+
+db.employees.find({experience: {$gt: 10}}, {name: 1, department: 1})
+
+db.courses.find({duration: {$gte: 12}}, {course_name: 1, instructor: 1})
+
+db.inventory.find({price: {$lte: 100}}, {item_name: 1, price: 1})
+
+db.students.find({name: {$in: ["Alice", "Bob", "Charlie"]}}, {name: 1, roll: 1})
+
+db.library.find({pages: {$gt: 150, $lt: 500}}, {title: 1, pages: 1})
+
+db.employees.find({department: {$ne: "HR"}, salary: {$gt: 60000}}, {name: 1, salary: 1})
+
+db.orders.find({status: {$in: ["completed", "in progress"]}}, {order_id: 1, status: 1})
+
+db.students.find({roll: {$gte: 500}, department: {$in: ["Biology", "Chemistry", "Physics"]}}, {name: 1, roll: 1, department: 1})
+
+
+
+
+
+
+
+
